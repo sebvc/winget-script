@@ -31,7 +31,7 @@ Winget v1.2.10271 introduced a new dependency for Microsoft.UI.Xaml.2.7 which yo
 ## Installing Winget
 
 0. Make sure all dependencies are installed before doing this!
-  * <mark>**SEB:** You can get dependencies bundles from the [latest WinGet cli release](https://github.com/microsoft/winget-cli/releases/latest) or the latest versions from above.</mark>
+   * <mark>**SEB:** You can get dependencies bundles from the [latest WinGet cli release](https://github.com/microsoft/winget-cli/releases/latest) or the latest versions from above.</mark>
 1. From the latest release download the .msixbundle install- and .xml license file:
 https://github.com/microsoft/winget-cli/releases/latest
 2. Install with:
