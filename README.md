@@ -1,10 +1,7 @@
-> **Important update!**
-> 
-> I'm no longer actively maintaining this due to moving to macOS as my daily OS.
-
 # What's this?
 
-In this repo I maintain a list ([winget.ps1](https://github.com/muradbuyukasik/winget-script/blob/main/winget.ps1)) of software I may install on a fresh installation of Windows 10 using Winget, and an installation guide for Winget on Windows 10 LTSC which can be found below.
+An installation guide for Winget on Windows 10 LTSC which can be found below.
++ The author of the original forked repo maintained a list ([winget.ps1](winget.ps1)) of software they may install on a fresh installation of Windows 10 using Winget, I will update this to reflect my usecase in the future.
 
 # Installing Winget on Windows 10 LTSC (IoT) manually
 
@@ -13,6 +10,7 @@ In this repo I maintain a list ([winget.ps1](https://github.com/muradbuyukasik/w
 ## Installing Dependencies
 
 * Open an elevated (administrator) PowerShell prompt and keep it open throughout this guide.
+* <mark>**SEB:** For Beckhoff IPCs I had to use the Default Windows Powershell to install WinGet, not Pwsh7. </mark>
 
 ### VC++ v14 Desktop Framework Package
 
@@ -33,8 +31,9 @@ Winget v1.2.10271 introduced a new dependency for Microsoft.UI.Xaml.2.7 which yo
 ## Installing Winget
 
 0. Make sure all dependencies are installed before doing this!
+  * <mark>**SEB:** You can get dependencies bundles from the [latest WinGet cli release](https://github.com/microsoft/winget-cli/releases/latest) or the latest versions from above.</mark>
 1. From the latest release download the .msixbundle install- and .xml license file:
-https://github.com/microsoft/winget-cli/releases
+https://github.com/microsoft/winget-cli/releases/latest
 2. Install with:
 `Add-AppxProvisionedPackage -Online -PackagePath "PATH TO MSIXBUNDLE" -LicensePath "PATH TO XML" -Verbose`
 3. Wait for the install to finish and you're done. You may need to restart the terminal, or reboot your pc.
